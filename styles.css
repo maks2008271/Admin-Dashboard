@@ -39,8 +39,22 @@
 
 .main {
   display:grid;
-  grid-template-rows: 1fr 4fr;
+  grid-template-rows: 1fr 5fr;
   background-color: var(--secondary-color);
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #eaeaea;
+  margin: 1em 0;
+  padding: 0;
+}
+
+.header .profile-picture {
+  border:2px solid var(--primary-color);
+  padding:2px;
 }
 
 .hi-there {
@@ -140,7 +154,7 @@
   background-color: var(--secondary-color);
   border:none;
   border-radius: 50px;
-  height:35px;
+  height:25px;
   max-width:80%;
   flex:1;
 }
@@ -166,6 +180,11 @@
   width: 30px;
 }
 
+.content-right {
+  display:flex;
+  flex-direction: column;
+}
+
 .content-title {
   margin-bottom:10px;
   font-weight: bold;
@@ -175,6 +194,7 @@
   background-color: white;
   border-radius: 10px;
   padding:20px;
+  margin-bottom:20px;
 }
 
 .annoucements-description {
@@ -186,12 +206,32 @@
   font-weight: bold;
 }
 
+.trending-content {
+  padding:20px;
+  background-color: white;
+  display:flex;
+  flex-direction: column;
+  gap:20px;
+  border-radius: 10px;
+}
+
+.trending-card {
+  display:flex;
+  align-items: center;
+  gap:15px;
+  flex:1;
+}
+
+.trending-description {
+  color: rgb(90, 90, 90)
+}
+
 .content {
   display:grid;
   grid-template-columns: 3fr 1fr;
   gap:20px;
   padding-top:2%;
-  padding-bottom:5%;
+  padding-bottom:3%;
   padding-inline:2%;
 }
 
@@ -206,6 +246,7 @@
   background-color: white;
   border-radius: 10px;
   overflow: hidden;
+  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.2);
 }
 
 .card-content {
@@ -220,6 +261,7 @@
 
 .card-title {
   font-weight: bold;
+  font-size:18px;
   margin-bottom:3px;
 }
 
@@ -230,7 +272,7 @@
 }
 
 .grid-container {
-  height:100%;
+  height:96%;
   display:grid;
   gap:20px;
   grid-template-columns: repeat(2, 1fr);
@@ -239,7 +281,7 @@
 
 .card-description {
   color:gray;
-  font-size:14px;
+  font-size:15px;
   max-width:300px;
 }
 
@@ -269,6 +311,6 @@ a {
   color:inherit
 }
 
-button, .card-title, .profile-picture {
+button, .card-title, .profile-picture, .trending-username {
   cursor:pointer
 }
